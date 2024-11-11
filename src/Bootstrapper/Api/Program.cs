@@ -1,7 +1,3 @@
-using Catalog;
-using Basket;
-using Ordering;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
