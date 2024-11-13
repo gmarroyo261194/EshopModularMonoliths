@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{4EAC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DFA77EE3-876F-41B6-BAF7-8399F8917EDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Bootstrapper\Api\Api.csproj", "{51D42A3D-941B-40FD-8666-A5B053F6FA54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Bootstrapper\Api\Api.csproj", "{51D42A3D-941B-40FD-8666-A5B053F6FA54}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{A6E49BCB-01FD-4C6F-A98A-068256A250F9}"
 EndProject
@@ -17,13 +17,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{B48B57
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{99EB3DB4-911D-4D5F-9383-6023E0F92DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog", "Modules\Catalog\Catalog\Catalog.csproj", "{53F07EC3-2C5E-4D41-9B13-37F598B49DBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog", "Modules\Catalog\Catalog\Catalog.csproj", "{53F07EC3-2C5E-4D41-9B13-37F598B49DBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket", "Modules\Basket\Basket\Basket.csproj", "{8A75B77A-3B51-497F-BD12-42EDC52E77EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket", "Modules\Basket\Basket\Basket.csproj", "{8A75B77A-3B51-497F-BD12-42EDC52E77EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering", "Modules\Ordering\Ordering\Ordering.csproj", "{17E94DF6-E771-4914-8D38-667C67BA0AD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering", "Modules\Ordering\Ordering\Ordering.csproj", "{17E94DF6-E771-4914-8D38-667C67BA0AD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared\Shared.csproj", "{A731BA19-D637-45A8-B9CC-3EB514C61F54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared\Shared.csproj", "{A731BA19-D637-45A8-B9CC-3EB514C61F54}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1E3C499C-B7D5-40FC-A528-BBB8424D2D8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{A731BA19-D637-45A8-B9CC-3EB514C61F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A731BA19-D637-45A8-B9CC-3EB514C61F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A731BA19-D637-45A8-B9CC-3EB514C61F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E3C499C-B7D5-40FC-A528-BBB8424D2D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E3C499C-B7D5-40FC-A528-BBB8424D2D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E3C499C-B7D5-40FC-A528-BBB8424D2D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E3C499C-B7D5-40FC-A528-BBB8424D2D8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
