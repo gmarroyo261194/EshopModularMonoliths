@@ -1,4 +1,6 @@
-
+using System.Text.Json;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,5 +20,29 @@ app
     .UseCatalogModule()
     .UseBasketModule()
     .UseOrderingModule();
+
+app.UseExceptionHandler(exceptionHandlerApp =>
+{
+    exceptionHandlerApp.Run(async context =>
+    {
+        var exception = context.Features.Get<IExceptionHandlerFeature>()?.Error;
+        if (exception == null) return;
+
+        var problemDetails = new ProblemDetails
+        {
+            Title = exception.Message,
+            Status = StatusCodes.Status500InternalServerError,
+            Detail = exception.StackTrace
+        };
+
+        var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
+        logger.LogError(exception, exception.Message);
+
+        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+        context.Response.ContentType = "application/problem+json";
+
+        await context.Response.WriteAsync(JsonSerializer.Serialize(problemDetails));
+    });
+});
 
 app.Run();
